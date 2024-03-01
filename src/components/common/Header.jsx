@@ -1,5 +1,8 @@
 import Logo from '../../assets/images/Logo.png'
-import {tabImages, tabNames} from "../../assets/tabs/Tabs";
+import {tabImages, tabNames} from '../../assets/tabs/Tabs';
+import ProfileImage from '../../assets/images/ProfileImage.png';
+import MikeIcon from '../../assets/images/TalkIcon.png'
+import SettingIcon from '../../assets/images/SettingIcon.png'
 
 export function Header() {
     return(
@@ -18,6 +21,17 @@ export function Header() {
 
                     ))
                 }
+            </div>
+
+            <div className='flex items-center gap-2'>
+                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
+                    <img src={MikeIcon} className='w-[60%]' />
+                </div>
+                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
+                    <img src={SettingIcon} className='w-[60%]'/>
+                </div>
+
+                <img src={ProfileImage} className='w-[50px] h-[50px] ml-4'/>
             </div>
         </header>
     )
