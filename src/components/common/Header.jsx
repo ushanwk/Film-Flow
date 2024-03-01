@@ -5,9 +5,7 @@ import MikeIcon from '../../assets/images/TalkIcon.png'
 import SettingIcon from '../../assets/images/SettingIcon.png'
 import {useState} from "react";
 
-export function Header() {
-
-    const [selectedTab, setSelectedTab] = useState('Home');
+export function Header({ selectedTab, setSelectedTab }) {
 
     return(
         <header className='w-full flex items-center justify-between'>
