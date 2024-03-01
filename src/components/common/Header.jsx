@@ -3,8 +3,12 @@ import {tabImages, tabNames} from '../../assets/tabs/Tabs';
 import ProfileImage from '../../assets/images/ProfileImage.png';
 import MikeIcon from '../../assets/images/TalkIcon.png'
 import SettingIcon from '../../assets/images/SettingIcon.png'
+import {useState} from "react";
 
 export function Header() {
+
+    const [selectedTab, setSelectedTab] = useState('Home');
+
     return(
         <header className='w-full flex items-center justify-between'>
             <img src={Logo} width={130} />
@@ -13,10 +17,12 @@ export function Header() {
                 {
                     tabNames.map((name, index) => (
                         <div
-                            className='bg-bgWhite h-10 w-28 rounded-xl px-4 flex gap-2 items-center justify-center cursor-pointer'>
-                            <img src={tabImages[index]} width={15}/>
+                            className={`bg-bgWhite h-10 w-28 rounded-xl px-4 flex gap-2 items-center justify-center cursor-pointer max-lg:w-full max-lg:gap-1 ${selectedTab === name ? 'border-[1px] border-accent' : undefined }`}
+                            onClick={() => {setSelectedTab(name)}}
+                        >
+                            <img src={tabImages[index]} className='w-[12px] h-[12px]'/>
 
-                            <h6 className='text-white text-[13px] font-semibold'>{name}</h6>
+                            <h6 className='text-white text-[13px] font-semibold max-lg:hidden'>{name}</h6>
                         </div>
 
                     ))
@@ -24,10 +30,10 @@ export function Header() {
             </div>
 
             <div className='flex items-center gap-2'>
-                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
+                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center  max-sm:hidden'>
                     <img src={MikeIcon} className='w-[60%]' />
                 </div>
-                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
+                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center  max-sm:hidden'>
                     <img src={SettingIcon} className='w-[60%]'/>
                 </div>
 
