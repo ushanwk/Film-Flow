@@ -13,11 +13,11 @@ export function Header() {
         <header className='w-full flex items-center justify-between'>
             <img src={Logo} width={130} />
 
-            <div className='flex gap-4'>
+            <div className='flex gap-4 max-lg:gap-2 max-sm:gap-1'>
                 {
                     tabNames.map((name, index) => (
                         <div
-                            className={`bg-bgWhite h-10 w-28 rounded-xl px-4 flex gap-2 items-center justify-center cursor-pointer max-lg:w-full max-lg:gap-1 ${selectedTab === name ? 'border-[1px] border-accent' : undefined }`}
+                            className={`bg-bgWhite h-10 w-28 rounded-xl px-4 flex gap-2 items-center justify-center cursor-pointer max-lg:w-full ${selectedTab === name ? 'border-[1px] border-accent' : undefined }`}
                             onClick={() => {setSelectedTab(name)}}
                         >
                             <img src={tabImages[index]} className='w-[12px] h-[12px]'/>
@@ -29,11 +29,11 @@ export function Header() {
                 }
             </div>
 
-            <div className='flex items-center gap-2'>
-                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center  max-sm:hidden'>
+            <div className='flex items-center gap-2 max-sm:hidden'>
+                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
                     <img src={MikeIcon} className='w-[60%]' />
                 </div>
-                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center  max-sm:hidden'>
+                <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
                     <img src={SettingIcon} className='w-[60%]'/>
                 </div>
 
