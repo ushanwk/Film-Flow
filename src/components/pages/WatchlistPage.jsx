@@ -1,7 +1,7 @@
 export const WatchlistPage = () => {
     return (
-        <section>
-            <h1 className='text-white'>Watchlist Page</h1>
+        <section className='w-full h-40 mt-20 mb-20 flex items-center justify-center font-bold'>
+            <h1 className='text-bgWhite text-[100px]'>Watchlist Page</h1>
         </section>
     )
 }

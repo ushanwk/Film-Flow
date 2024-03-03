@@ -1,7 +1,7 @@
 export const FavouritePage = () => {
     return (
-        <section>
-            <h1 className='text-white'>Favourite Page</h1>
+        <section className='w-full h-40 mt-20 mb-20 flex items-center justify-center font-bold'>
+            <h1 className='text-bgWhite text-[100px]'>Favourite Page</h1>
         </section>
     )
 }
