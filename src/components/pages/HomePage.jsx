@@ -21,7 +21,7 @@ export const HomePage = () => {
                     </div>
                 </div>
 
-                <div className='w-full flex justify-between mt-5'>
+                <div className='w-full flex justify-between mt-8'>
 
                     <FilmCard />
                     <FilmCard />

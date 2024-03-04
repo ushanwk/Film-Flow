@@ -4,6 +4,7 @@ import ProfileImage from '../../assets/images/ProfileImage.png';
 import MikeIcon from '../../assets/images/TalkIcon.png'
 import SettingIcon from '../../assets/images/SettingIcon.png'
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 export function Header({ selectedTab, setSelectedTab }) {
 
@@ -29,7 +30,7 @@ export function Header({ selectedTab, setSelectedTab }) {
 
             <div className='flex items-center gap-2 max-sm:hidden'>
                 <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
-                    <img src={MikeIcon} className='w-[60%]' />
+                    <img src={MikeIcon} className='w-[60%]'/>
                 </div>
                 <div className='rounded-[100%] bg-bgWhite w-8 h-8 flex items-center justify-center'>
                     <img src={SettingIcon} className='w-[60%]'/>
