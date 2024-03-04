@@ -1,4 +1,5 @@
 import HiLogo from '../../assets/images/HiLogo.png';
+import {FilmCard} from "../common/FilmCard";
 
 export const HomePage = () => {
     return (
@@ -18,6 +19,12 @@ export const HomePage = () => {
                     <div className='w-28 h-10 border-[1px] border-white rounded-full flex items-center justify-center'>
                         <h5 className='text-white font-normal'>See all</h5>
                     </div>
+                </div>
+
+                <div className='w-full flex justify-between mt-5'>
+
+                    <FilmCard />
+
                 </div>
 
             </div>
