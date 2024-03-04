@@ -24,6 +24,10 @@ export const HomePage = () => {
                 <div className='w-full flex justify-between mt-5'>
 
                     <FilmCard />
+                    <FilmCard />
+                    <FilmCard />
+                    <FilmCard />
+                    <FilmCard />
 
                 </div>
 
