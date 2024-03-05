@@ -9,7 +9,7 @@ export const WatchlistPage = () => {
 
             <div className='w-full mt-[85px]'>
                 <div className='w-full flex justify-between items-center'>
-                    <h4 className='text-white text-[30px] font-normal'>Recommend for you</h4>
+                    <h4 className='text-white text-[30px] font-normal'>Your Watchlist</h4>
 
                     <div className='w-28 h-10 border-[1px] border-white rounded-full flex items-center justify-center'>
                         <h5 className='text-white font-normal'>See all</h5>
