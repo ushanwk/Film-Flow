@@ -3,7 +3,7 @@ import {FilmCard} from "../common/FilmCard";
 
 export const HomePage = () => {
     return (
-        <section className='w-full mt-20 mb-20 font-bold'>
+        <section className='w-full mt-20 mb-20'>
 
             <div className='w-full flex items-center gap-5'>
                 <img src={HiLogo} className='w-12 h-12'/>

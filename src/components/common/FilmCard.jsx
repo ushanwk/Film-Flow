@@ -11,7 +11,7 @@ export const FilmCard = () => {
 
             <div className='w-full bg-bgWhite rounded-b-xl px-4 py-4'>
                 <div className='w-full flex justify-between items-center'>
-                    <h1 className='text-white'>Game of Thrones</h1>
+                    <h1 className='text-white font-bold'>Game of Thrones</h1>
                     <img src={HeartLogo} className='w-[20px] h-[20px] mt-1' />
                 </div>
 
