@@ -15,14 +15,14 @@ export function Header({ selectedTab, setSelectedTab }) {
             <div className='flex gap-4 max-lg:gap-2 max-sm:gap-1'>
                 {
                     tabNames.map((name, index) => (
-                        <div
+                        <Link to={`/${name}`}
                             className={`bg-bgWhite h-10 w-28 rounded-xl px-4 flex gap-2 items-center justify-center cursor-pointer max-lg:w-full ${selectedTab === name ? 'border-[1px] border-accent' : undefined }`}
                             onClick={() => {setSelectedTab(name)}}
                         >
                             <img src={tabImages[index]} className='w-[12px] h-[12px]'/>
 
                             <h6 className='text-white text-[13px] font-semibold max-lg:hidden'>{name}</h6>
-                        </div>
+                        </Link>
 
                     ))
                 }
