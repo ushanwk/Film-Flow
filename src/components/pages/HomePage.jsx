@@ -1,8 +1,17 @@
 import HiLogo from '../../assets/images/HiLogo.png';
 import {FilmCard} from "../common/FilmCard";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import {search} from "../../requests/ApiRequests";
 
-export const HomePage = ({data}) => {
+export const HomePage = ({}) => {
+
+    const [filmData, setFilmData] = useState([]);
+
+    useEffect(() => {
+        search('Game').then(res => {
+            setFilmData(res.data.d);
+        });
+    }, []);
 
     return (
         <section className='w-full mt-20 mb-20'>
@@ -26,7 +35,7 @@ export const HomePage = ({data}) => {
                 <div className='w-full flex justify-between mt-8'>
 
                     {
-                        data?.map((item, index) => (
+                        filmData?.map((item, index) => (
                             index > 0 && index < 6 && (<FilmCard key={index} img={item?.i?.imageUrl} title={item?.l} rank={item?.i?.width}/>)
                         ))
                     }
