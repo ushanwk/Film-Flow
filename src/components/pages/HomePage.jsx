@@ -1,7 +1,9 @@
 import HiLogo from '../../assets/images/HiLogo.png';
 import {FilmCard} from "../common/FilmCard";
+import {useEffect} from "react";
 
-export const HomePage = () => {
+export const HomePage = ({data}) => {
+
     return (
         <section className='w-full mt-20 mb-20'>
 
@@ -23,11 +25,11 @@ export const HomePage = () => {
 
                 <div className='w-full flex justify-between mt-8'>
 
-                    <FilmCard />
-                    <FilmCard />
-                    <FilmCard />
-                    <FilmCard />
-                    <FilmCard />
+                    {
+                        data?.map((item, index) => (
+                            index > 0 && index < 6 && (<FilmCard key={index} img={item?.i?.imageUrl} title={item?.l} rank={item?.i?.width}/>)
+                        ))
+                    }
 
                 </div>
 

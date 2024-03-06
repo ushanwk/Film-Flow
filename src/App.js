@@ -10,12 +10,6 @@ function App() {
 
     const [selectedTab, setSelectedTab] = useState('Home');
 
-    useEffect(() => {
-        search('Game').then(res => {
-            console.log(res);
-        });
-    }, []);
-
     return (
         <BrowserRouter>
             <div className="App pt-10 pb-10
@@ -24,8 +18,8 @@ function App() {
             >
 
                 <Header selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
-                <MainSection/>
-                <Footer/>
+                <MainSection />
+                <Footer />
 
             </div>
         </BrowserRouter>
