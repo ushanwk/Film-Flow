@@ -9,7 +9,9 @@ export const SearchPage = () => {
     const [filmData, setFilmData] = useState([]);
 
     useEffect(() => {
-        search(searchValue).then(res => {
+        search(() => {
+            if(searchValue){}
+        }).then(res => {
             setFilmData(res.data.d);
         });
     }, [searchValue]);
@@ -45,7 +47,7 @@ export const SearchPage = () => {
                             index > 0 && index < 6 && (<FilmCard key={index} img={item?.i?.imageUrl} title={item?.l} rank={item?.i?.width}/>)
                         ))
                     ) : (
-                        <h1>Loading....</h1>
+                        <div className='w-full flex justify-center items-center'><h1 className='text-bgWhite text-[50px] font-bold'>Loading...</h1></div>
                     )
                 }
 
