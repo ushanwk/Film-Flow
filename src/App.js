@@ -2,12 +2,19 @@ import './App.css';
 import {Header} from "./components/common/Header";
 import {Footer} from "./components/common/Footer";
 import {MainSection} from "./components/common/MainSection";
-import {useState} from "react";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {BrowserRouter} from "react-router-dom";
+import {search} from "./requests/ApiRequests";
 
 function App() {
 
     const [selectedTab, setSelectedTab] = useState('Home');
+
+    useEffect(() => {
+        search('Game').then(res => {
+            console.log(res);
+        });
+    }, []);
 
     return (
         <BrowserRouter>

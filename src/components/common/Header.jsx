@@ -17,7 +17,7 @@ export function Header({ selectedTab, setSelectedTab }) {
                     tabNames.map((name, index) => (
                         <Link to={`/${name}`}
                             className={`bg-bgWhite h-10 w-28 rounded-xl px-4 flex gap-2 items-center justify-center cursor-pointer max-lg:w-full ${selectedTab === name ? 'border-[1px] border-accent' : undefined }`}
-                            onClick={() => {setSelectedTab(name)}}
+                            onClick={() => {setSelectedTab(name)}} key={index}
                         >
                             <img src={tabImages[index]} className='w-[12px] h-[12px]'/>
 
